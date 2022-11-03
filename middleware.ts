@@ -11,10 +11,7 @@ export function middleware(request: NextRequest) {
     img-src 'self' data: https: blob: https://www.googletagmanager.com;
     worker-src 'self' *.youtube.com *.google.com *.twitter.com;
     connect-src *;
-    object-src 'none';
     form-action 'self';
-    frame-ancestors 'none';
-    base-uri 'none';
   `;
     response.headers.set("Content-Security-Policy", csp.replace(/\n/g, ""));
 
