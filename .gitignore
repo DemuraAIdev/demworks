@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# COmpie
+service-worker.js
+
 # production
 /build
 
