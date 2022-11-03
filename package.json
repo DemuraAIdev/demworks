@@ -6,7 +6,8 @@
     "dev": "next dev",
     "dev:turbo": "concurrently \"next dev --turbo --show-all\" \"tailwindcss --input styles/globals.css --output styles/globals.css --watch\"",
     "build:turbo": "tailwindcss styles/globals.css --output output.css && next build",
-    "build": "next-sitemap && next build",
+    "build": "next build",
+    "launch": "next build && next-sitemap",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
