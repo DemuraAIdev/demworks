@@ -5,8 +5,8 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.next();
     const csp = `
     default-src 'self';
-    script-src 'self' *.twitter.com 'unsafe-eval' 'unsafe-inline' data:
-    child-src *.youtube.com *.google.com *.twitter.com https://cdpn.io https://codepen.io https://dbdiagram.io;
+    script-src 'self' *.twitter.com 'unsafe-eval' 'unsafe-inline' data:;
+    child-src *.youtube.com *.google.com *.twitter.com;
     style-src 'self' *.googleapis.com 'unsafe-inline' 'unsafe-eval';
     img-src 'self' data: https: blob: https://www.googletagmanager.com;
     worker-src 'self' *.youtube.com *.google.com *.twitter.com;
