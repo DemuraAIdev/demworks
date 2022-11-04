@@ -6,7 +6,7 @@
     "dev": "next dev",
     "dev:turbo": "concurrently \"next dev --turbo --show-all\" \"tailwindcss --input styles/globals.css --output styles/globals.css --watch\"",
     "build:turbo": "tailwindcss styles/globals.css --output output.css && next build",
-    "build": "next build",
+    "build": "ANALYZE=true next build",
     "launch": "next build && next-sitemap",
     "postbuild": "next-sitemap",
     "start": "next start",
@@ -15,6 +15,7 @@
   "dependencies": {
     "@mdx-js/loader": "^2.1.5",
     "@mdx-js/react": "^2.1.5",
+    "@next/bundle-analyzer": "^13.0.2",
     "@next/mdx": "^13.0.1",
     "@tailwindcss/typography": "^0.5.7",
     "@types/mdx": "^2.0.3",

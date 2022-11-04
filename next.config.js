@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
+
 const withPWA = require('next-pwa')({
   dest: 'public',
   disable: process.env.NODE_ENV === 'development',
@@ -21,7 +25,7 @@ const withMDX = require('@next/mdx')({
   },
 })
 
-const nextConfig = withPWA(withMDX({
+const nextConfig = withBundleAnalyzer(withPWA(withMDX({
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   reactStrictMode: true,
   swcMinify: true,
@@ -33,6 +37,6 @@ const nextConfig = withPWA(withMDX({
     })
     return config
   }
-}))
+})))
 
 module.exports = nextConfig
