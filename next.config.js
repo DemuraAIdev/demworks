@@ -13,6 +13,7 @@ const withMDX = require('@next/mdx')({
     // If you use remark-gfm, you'll need to use next.config.mjs
     // as the package is ESM only
     // https://github.com/remarkjs/remark-gfm#install
+    providerImportSource: '@mdx-js/react',
     remarkPlugins: [],
     rehypePlugins: [],
     // If you use `MDXProvider`, uncomment the following line.
